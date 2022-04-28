@@ -10,3 +10,15 @@
     margin: 0 auto;
 
 }
+
+.background{
+    background-image: url("../../assets/images/Musica\ Instrumento.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    min-height: calc(100vh - 64px); 
+
+   
+}
