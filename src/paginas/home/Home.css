@@ -4,21 +4,45 @@
 }
 
 .img {
-    width:400px;
+    width: 400px;
     height: 300px;
     display: block;
     margin: 0 auto;
 
 }
 
-.background{
+.background {
     background-image: url("../../assets/images/Musica\ Instrumento.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    background-color: #3F51B5;
     width: 100vw;
-    min-height: calc(100vh - 64px); 
+    min-height: calc(100vh - 64px);
 
-   
+}
+.texto1 {
+
+    color: OrangeRed !important;
+    font-weight: bold  !important; 
+}
+
+.texto2{
+
+    color: Tomato !important; 
+    font-weight: bold !important ;
+
+}
+
+.botao {
+
+    border-color: white !important;
+    background-color: Tomato !important; 
+    color: white !important;
+
+}
+
+.postagem {
+
+    background-color:white !important;
 }

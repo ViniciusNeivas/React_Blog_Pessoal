@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/estaticos/navbar/Navbar';
-import Footer from './components/estaticos/footer/footer';
+import Footer from './components/estaticos/footer/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';

@@ -1,8 +1,8 @@
 import React from 'react';
 import './Login.css';
-import { Grid, Box, Typography, TextField,  Button } from '@material-ui/core';
+import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import musica1 from '../../assets/images/musica1.jpg';
+
 function Login() {
 
     return (
@@ -15,7 +15,7 @@ function Login() {
                     
                     <form>
 
-                        <Typography variant = 'h3' gutterBottom color = 'textPrimary' component = 'h3' align = 'center' style={{ fontWeight: 'bold'}}>Entrar</Typography>
+                        <Typography variant = 'h3' gutterBottom color = 'textPrimary' component = 'h3' align = 'center' className='textos1'>Entrar</Typography>
                         <TextField id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
@@ -30,11 +30,11 @@ function Login() {
                     <Box  display= 'flex' justifyContent= 'center' marginTop={2}>
                         <Box marginRight={1}>
                             
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não Tem Uma Conta !?</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center'>Não Tem Uma Conta!?</Typography>
                         
                         </Box>
 
-                        <Typography variant='subtitle1' gutterBottom align='center' style={{fontWeight:'bold'}}>Bora Cadastrar !?</Typography>
+                        <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Bora Cadastrar!?</Typography>
                         
 
                     </Box>
@@ -42,12 +42,8 @@ function Login() {
             
             </Grid>
                  
-                <Grid xs={6} style={{
-
-                    backgroundImage:  `url ("musica1.jpg")`,
-                    backgroundRepeat : 'no repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition:'center' 
-                }} >
-                `
+                <Grid xs={6} className = 'imagem'  >
+                
                  </Grid>
 
 
