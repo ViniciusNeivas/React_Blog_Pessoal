@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaTema.css';
-import Temas from '../../../models/Temas';
+import Tema from '../../../models/Tema';
 import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../services/Service';
 
 function ListaTema() {
 
-  const [temas, setTemas] = useState<Temas[]> ([])
+  const [temas, setTemas] = useState<Tema[]> ([])
   const [token, setToken] = useLocalStorage('token') 
   let history = useNavigate();
 
@@ -23,7 +23,8 @@ function ListaTema() {
 
   }, [token] )
 
-  async function getTemas() {
+
+  async function getTema() {
     await busca ("/temas", setTemas, {
 
       headers: {
@@ -38,7 +39,7 @@ function ListaTema() {
 
 
   useEffect (() => {
-    getTemas ()
+    getTema ()
   }, [temas.length])
 
 
@@ -46,7 +47,7 @@ function ListaTema() {
     <>
     {
 
-        temas.map(temas =>(
+        temas.map(tema =>(
 
 
       <Box m={2} >
@@ -56,11 +57,14 @@ function ListaTema() {
           <CardContent>,
         
             <Typography color="textSecondary" gutterBottom>
+              
               Tema
+            
             </Typography>
             
             <Typography variant="h5" component="h2">
-              {temas.descricao}
+              
+              {tema.descricao}
             
             </Typography>
           
@@ -70,24 +74,28 @@ function ListaTema() {
             
             <Box display="flex" justifyContent="center" mb={1.5} >
 
-              <Link to={`/formularioTemas/${temas.id}`} className="text-decorator-none">
+              <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                
                 <Box mx={1}>
                   
                   <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
+                    
+                    Atualizar
+                  
                   </Button>
                
                 </Box>
               
               </Link>
 
-              <Link to={`/deletarTemas/${temas.id}`} className="text-decorator-none">
+              <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
                 
                 <Box mx={1}>
                   
                   <Button variant="contained" size='small' color="secondary">
-                    deletar
+                    
+                    Deletar
+                  
                   </Button>
                 
                 </Box>

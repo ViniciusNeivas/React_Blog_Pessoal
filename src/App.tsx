@@ -13,6 +13,7 @@ import CadastroTema from './components/temas/cadastroTema/cadastroTema';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 
+
 function App() {
   
   return (
@@ -41,13 +42,13 @@ function App() {
 
           <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
           
-          <Route path="/formularioTemas" element={<CadastroTema />} />
+          <Route path="/formularioTema" element={<CadastroTema />} />
 
-          <Route path="/formularioTemas/:id" element={<CadastroTema />} />
+          <Route path="/formularioTema/:id" element={<CadastroTema />} />
 
           <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
 
-          <Route path="/deletarTemas/:id" element={<DeletarTema />} />
+          <Route path="/deletarTema/:id" element={<DeletarTema />} />
 
         </Routes>
       

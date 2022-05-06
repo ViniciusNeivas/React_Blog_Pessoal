@@ -1,11 +1,12 @@
-import Temas from './Temas';
+import Tema from './Tema';
 
 interface Postagem {
 
     id:number;
     titulo: string;  
     texto: string;
-    tema?: Temas|null
+    data: string;
+    tema?: Tema|null
     
 }
 

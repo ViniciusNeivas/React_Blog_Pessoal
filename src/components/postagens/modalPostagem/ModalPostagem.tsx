@@ -46,7 +46,9 @@ function ModalPostagem () {
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
+      
       <Box display="flex" justifyContent="flex-end" className="cursor">
+        
         <CloseIcon onClick={handleClose}/>
       
       </Box>
@@ -57,20 +59,22 @@ function ModalPostagem () {
   );
 
   return (
+    
     <div>
-      <Button
-        variant="outlined"
-        className="btnModal"
-        onClick={handleOpen}>Nova Postagem</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        {body}
-      </Modal>
-    </div>
-  );
+    <Button
+      variant="outlined"
+      className="btnModal"
+      onClick={handleOpen}>Nova Postagem</Button>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="simple-modal-title"
+      aria-describedby="simple-modal-description"
+    >
+      {body}
+    </Modal>
+  </div>
+);
 }
+
 export default ModalPostagem

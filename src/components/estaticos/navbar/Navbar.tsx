@@ -70,7 +70,7 @@ function Navbar() {
                         </Link>
 
 
-                        <Link to ="/formularioTemas" className='text-decorator-none'>
+                        <Link to ="/formularioTema" className='text-decorator-none'>
 
                              <Box mx={1} className = 'cursor'>
                         
