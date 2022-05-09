@@ -1,18 +1,6 @@
-.titulo {
-    color: blue;
-    text-align: center;
-}
-
-.img {
-    width: 400px;
-    height: 300px;
-    display: block;
-    margin: 0 auto;
-
-}
 
 .background {
-    background-image: url("../../assets/images/Musica\ Instrumento.jpg");
+    background-image: url("../../assets/images/Concurso\ de\ Musica_0.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,26 +11,63 @@
 }
 .texto1 {
 
-    color: OrangeRed !important;
+    color: orangered !important;
     font-weight: bold  !important; 
+    font-family: 'Macondo' !important;
+    font-weight: 400px !important;
+    font-size: 80px !important;
+
 }
 
 .texto2{
 
-    color: Tomato !important; 
+    color: #ff4500 !important; 
     font-weight: bold !important ;
-
+    font-family: 'Macondo' !important;
+    font-size: 40px !important;
 }
 
 .botao {
 
-    border-color: white !important;
+    display: inline-block;
+    padding: 3px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #df644b; 
+    border: none;
+    border-radius: 50px !important;
+    /* box-shadow: 0 4px #df644b ; */
+    
+   
+   
+    border-color: white  !important;
+    background-color: tomato !important; 
+    color:white !important;
+
+    /* border-color: white !important;
     background-color: Tomato !important; 
-    color: white !important;
+    color: white !important; */
 
 }
 
-.postagem {
+.txtVerPostagens
+    {color: white !important; 
+    font-weight: bold !important ;
+    font-family: 'Macondo' !important;
+    font-size: 16px !important}
+    
 
-    background-color:white !important;
+.postagens {
+
+    /* border-color: white !important;
+    background-color: Tomato !important; 
+    color: white !important; */
+
+
+background-color:#eec391 !important;
 }
+

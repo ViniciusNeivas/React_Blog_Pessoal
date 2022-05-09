@@ -35,10 +35,10 @@ function Navbar() {
                         
                         <Link to ="/home" className='text-decorator-none'>
                         
-                            <Box mx={1} className = 'cursor'>
+                            <Box mx={1} className = 'cursor button:hover button:active button' >
                         
                                 <Typography variant="h6" color="inherit">
-                                    Home
+                                  HOME
                                 </Typography>
                         
                             </Box>
@@ -47,10 +47,10 @@ function Navbar() {
                         
                         <Link to ="/posts" className='text-decorator-none '>
 
-                             <Box mx={1} className = 'cursor'>
+                             <Box mx={1} className = 'cursor button:hover button:active button' >
                         
                                 <Typography variant="h6" color="inherit">
-                                    Postagens
+                                    POSTAGEM
                                 </Typography>
                         
                              </Box>
@@ -60,10 +60,10 @@ function Navbar() {
                     
                         <Link to ="/temas" className='text-decorator-none'>
 
-                            <Box mx={1} className = 'cursor' >
+                            <Box mx={1} className = 'cursor button:hover button:active button' >
                         
                                 <Typography variant="h6" color="inherit">
-                                    Temas
+                                    TEMAS
                                  </Typography>
                         
                             </Box>
@@ -72,10 +72,12 @@ function Navbar() {
 
                         <Link to ="/formularioTema" className='text-decorator-none'>
 
-                             <Box mx={1} className = 'cursor'>
+                             <Box mx={1}className = 'cursor button:hover button:active button' >
                         
                                 <Typography variant="h6" color="inherit">
-                                  Cadastrar Tema
+                                  
+                                  CADASTRAR TEMA
+                                
                                 </Typography>
                     
                             </Box>
@@ -83,10 +85,12 @@ function Navbar() {
                         </Link>
 
                            
-                            <Box mx={1} className = 'cursor' onClick={goLogout}>
+                            <Box mx={1} className = 'cursor button:hover button:active button' onClick={goLogout}>
 
                                 <Typography variant="h6" color="inherit">
-                                    Logout
+                                   
+                                    LOGOUT
+                               
                                 </Typography>
 
                             </Box>

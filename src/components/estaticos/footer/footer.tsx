@@ -14,7 +14,13 @@ function Footer() {
                     <Box className='box1'>
                         
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom className='textos'>Siga-nos Nas Redes Sociais </Typography>
+                        
+                            <Typography variant="h5" align="center" gutterBottom className='textosRedes'>
+                        
+                                Siga-nos Nas Redes Sociais 
+                        
+                            </Typography>
+                        
                         </Box>
                         
                         <Box display="flex" alignItems="center" justifyContent="center">
@@ -39,14 +45,23 @@ function Footer() {
                       
                         <Box paddingTop={1}>
                       
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos'>© 2022 Copyright:</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textosCopy'>
+                            
+                                © 2022 Copyright:
+                                
+                            </Typography>
                       
                         </Box>
                       
                         <Box>
                             
                             <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">brasil.generation.org</Typography>
+                                
+                                <Typography variant="subtitle2" gutterBottom className='textosCopy' align="center">
+                                
+                                    brasil.generation.org
+                                
+                                </Typography>
                             
                             </a>
                         

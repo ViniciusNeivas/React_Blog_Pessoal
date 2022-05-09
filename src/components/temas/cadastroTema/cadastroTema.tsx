@@ -118,7 +118,7 @@ function CadastroTema() {
            
             <form onSubmit={onSubmit}>
                
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de Cadastro Tema</Typography>
                
                 <TextField value={tema.descricao} onChange ={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}  id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                
