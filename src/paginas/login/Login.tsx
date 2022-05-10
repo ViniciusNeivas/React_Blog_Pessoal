@@ -4,13 +4,15 @@ import './Login.css';
 import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import UserLogin from "../../models/UserLogin";
-import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
 
 function Login() {
 
     let history = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState ('');
 
     const [userLogin, setUserLogin] = useState<UserLogin> (
         
@@ -24,6 +26,7 @@ function Login() {
 
          useEffect(() => {
              if (token !==""){
+                 dispatch (addToken(token))
                  history ('/home')
              }
          }, [token])   
@@ -52,7 +55,7 @@ function Login() {
             // const resposta = await api.post(`/usuarios/logar, userLogin`)
             // setToken(resposta.data.token)
 
-            alert ('Usuário Logado Com Sucesso !')
+            
 
         } catch (error) {
             alert ('Dados do Usuário Inconsistentes. Erro ao Logar !')

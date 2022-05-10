@@ -4,13 +4,18 @@ import './Home.css';
 import musica from '../../assets/images/musica.jpg'
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
-import { useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
 function Home() {
     
     let history = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector <TokenState, TokenState["tokens"]> (
+
+        (state) => state.tokens
+
+    );
     
     useEffect(() => {
       
@@ -53,12 +58,17 @@ function Home() {
                         
                         </Box>
                         
-                        <Button variant="outlined" className = 'botao txtVerPostagens' >
+                        <Link to = "/posts" className='text-decorator-none'>
                         
-                            Ver Postagens
+                            <Button variant="outlined" className = 'botao txtVerPostagens ' >
                         
-                        </Button>
+                                Ver Postagens
                     
+                            </Button>
+                
+                        </Link>
+
+                        
                     </Box>
                 
                 </Grid>
