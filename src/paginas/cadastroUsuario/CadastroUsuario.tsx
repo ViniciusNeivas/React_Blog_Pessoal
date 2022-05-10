@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './CadastroUsuario.css'
 import User from "../../models/User";
 import{cadastroUsuario} from '../../services/Service';
+import { toast } from "react-toastify";
 
 
 function CadastroUsuario() {
@@ -58,14 +59,56 @@ function updatedModel (e: ChangeEvent<HTMLInputElement>){
 async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    if(confirmarSenha === user.senha) {
-        cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+    if(confirmarSenha === user.senha && user.senha.length >=8) {
+       
+       try {
+       
+            await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
 
-        alert ('Usuário Cadastrado Com Sucesso !')
+
+        toast.success("Usuário Cadastrado Com Sucesso!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+ 
+        });
+    
+    } catch (erro){
+        toast.error("Erro ao Cadastrado O Usuário", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+
+        
+        });
+    }
     
     } else {
-        alert ('Dados são inconsistentes. Por Favor, Vefificar as Informações de Cadastro ')
-        
+       
+        toast.error("Dados são inconsistentes. Por Favor, Vefificar as Informações de Cadastro", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+ 
+        });
+     
+                setUser ({ ...user, senha: ""})
+                setConfirmarSenha ("")
     } 
 }
 

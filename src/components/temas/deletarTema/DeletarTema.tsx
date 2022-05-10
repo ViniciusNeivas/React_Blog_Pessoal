@@ -6,6 +6,7 @@ import { buscaId, deleteId } from '../../../services/Service';
 import "./DeletarTema.css"
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function DeletarTema() {
 
@@ -22,7 +23,20 @@ function DeletarTema() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+
+
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+            
             history("/login")
 
         }
@@ -52,10 +66,34 @@ function DeletarTema() {
                 }
             });
             
-            alert('Tema deletado com sucesso');
+            toast.success("Tema Deletado Com Sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+
             
         } catch (error) {
-            alert('Erro ao deletar');
+            
+            toast.error("Erro ao Deletar O Tema", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+            
+    
         }
 
     }

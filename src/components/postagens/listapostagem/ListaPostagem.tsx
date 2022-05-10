@@ -8,6 +8,7 @@ import { busca } from '../../../services/Service';
 import Postagem from '../../../models/Postagem';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function ListaTema() {
 
@@ -25,7 +26,18 @@ function ListaTema() {
 
     if (token === ''){
 
-      alert ('Você Precisar Estar Logado!')
+      toast.error("Você Precisa Estar Logado!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+
+    });
+    
       history("/login")
     
     }

@@ -5,6 +5,7 @@ import { buscaId, post, put } from '../../../services/Service';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 
@@ -27,7 +28,19 @@ function CadastroTema() {
 
         if (token === "") {
 
-            alert("Você Precisa Estar Logado")
+
+            toast.error("Você Precisa Estar Logado!", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+            
             history("/login")
 
         }
@@ -83,11 +96,36 @@ function CadastroTema() {
                 }
             })
             
-            alert('Tema Atualizado Com Sucesso');
+            toast.success("Tema Cadastrado Com Sucesso!", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+
+
             
         } catch (error) {
+
             console.log(`Error: ${error}`)
-            alert("Erro, Por Favor Verifique A Quantidade Mínima de Caracteres")
+
+            toast.error("Erro, Por Favor Verifique A Quantidade Mínima de Caracteres", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+
         }
         }else {
             
@@ -99,12 +137,37 @@ function CadastroTema() {
                 }
             })
             
-            alert('Tema Cadastrado Com Sucesso');
+            toast.success("Tema Cadastrado Com Sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+
+           
         }
 
         catch (error) {
             console.log(`Error: ${error}`)
-            alert("Erro, por favor verifique a quantidade minima de caracteres")
+           
+            toast.error("Erro, por favor verifique a quantidade minima de caracteres", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+     
+            });
+
+
         }
     }
         back()
