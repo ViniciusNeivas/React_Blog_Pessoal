@@ -35,15 +35,15 @@ function Footer() {
                 
                 <Box display="flex" alignItems="center" justifyContent="center">
                 
-                    <a href="https://www.facebook.com/generationbrasil" target="_blank">
+                    <a href="https://www.facebook.com/vinicius.dos.s.neivas" target="_blank">
                         <FacebookIcon className='redes' />
                     </a>
                    
-                    <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                    <a href="https://www.instagram.com/vinicius.westside/" target="_blank">
                         <InstagramIcon className='redes'/>
                     </a>
                    
-                    <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                    <a href="https://www.linkedin.com/in/viniciusneivas/" target="_blank">
                         <LinkedInIcon className='redes'  />
                     </a>
                 
@@ -57,7 +57,7 @@ function Footer() {
               
                     <Typography variant="subtitle2" align="center" gutterBottom className='textosCopy'>
                     
-                        © 2022 Copyright:
+                        © 2022 Copyright
                         
                     </Typography>
               

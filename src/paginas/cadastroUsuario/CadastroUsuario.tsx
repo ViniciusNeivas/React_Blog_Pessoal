@@ -128,16 +128,24 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
                         
                                                                 {/* NOME */}
-                        <TextField value={user.nome} onChange={(e : ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
+                        <TextField value={user.nome} onChange={(e : ChangeEvent<HTMLInputElement>) => updatedModel(e)} 
+                            id='nome' label='Nome' variant='outlined' name='nome' margin='normal' 
+                            placeholder='Digite de 3 a 100 Caracteres' required fullWidth />
                         
                                                                  {/* USUÁRIO */}
-                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} 
+                            id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' 
+                            placeholder='Digite Seu E-Mail' required fullWidth />
                         
                                                                  {/* SENHA */}
-                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' 
+                            placeholder='Senha Com No Mínimo 8 Dígitos' required fullWidth />
                         
                                                                  {/* CONFIRMAR SENHA */}
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}id='confirmarsenha' label='Confirmar Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
+                            id='confirmarsenha' label='Confirmar Senha' variant='outlined' name='senha' margin='normal' type='password' 
+                            placeholder='Senha Com No Mínimo 8 Dígitos' required fullWidth />
                         
                         <Box marginTop={2} textAlign='center'>
                            
