@@ -103,7 +103,7 @@ function Login() {
                     
                     <form  onSubmit = {onSubmit} >
 
-                        <Typography variant = 'h3' gutterBottom color = 'textPrimary' component = 'h3' align = 'center' className='textos1'>
+                        <Typography variant = 'h3' gutterBottom color = 'textPrimary' component = 'h3' align = 'center' className='txtEntrar'>
                         
                             Entrar
                             
@@ -125,7 +125,9 @@ function Login() {
                         <Box marginTop={2} textAlign='center'>
                             
                                 <Button type='submit' variant='contained'  color='primary' >
+                                    
                                     Logar
+                                
                                 </Button>    
                             
                         </Box>    
@@ -134,7 +136,7 @@ function Login() {
                     <Box  display= 'flex' justifyContent= 'center' marginTop={2}>
                         <Box marginRight={1}>
                             
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não Tem Uma Conta!?</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Não Tem Uma Conta!?</Typography>
                         
                         </Box>
 

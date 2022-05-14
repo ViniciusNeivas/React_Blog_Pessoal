@@ -1,3 +1,18 @@
 .topo{
     margin-top: 20px;
 }
+
+
+.tituloForm{
+
+font-weight: bold !important ;
+font-family: 'Macondo' !important;
+font-size: 35px !important;
+color: black!important;
+
+}
+   
+.central{
+
+   align-items:  center !important;
+}

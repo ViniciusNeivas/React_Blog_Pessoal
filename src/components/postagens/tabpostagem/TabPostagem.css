@@ -32,3 +32,19 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
     }
+
+   
+    .txtSobreMim{
+
+      font-weight: bold !important;
+      font-size: 30 px;
+
+    }
+    
+    .txtSobreMim1{
+
+      font-family: 'Macondo' !important;
+      font-weight: bold !important;
+      font-size: 25px !important;
+
+    }

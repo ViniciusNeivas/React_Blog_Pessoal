@@ -188,23 +188,33 @@ function CadastroPost() {
             
             <form onSubmit={onSubmit}>
                 
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className="tituloForm">
                     
-                    Formulário de Cadastro de Postagem
+                    Formulário 
                 
                 </Typography>
                 
+                
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className="tituloForm">
+                    
+                    Cadastro  de Postagem
+                
+                </Typography>
+                            
+
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} 
-                id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
+                id="titulo" label="Titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} 
-                id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
+                id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth />
 
-                <FormControl >
+                <FormControl  >
                    
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
                    
                     <Select
+                    
+                        
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
                         onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
@@ -225,7 +235,7 @@ function CadastroPost() {
                     
                     </FormHelperText>
                     
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" >
                         
                         Finalizar
                     

@@ -125,7 +125,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
 
                     <form onSubmit={onSubmit}>
 
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='txtCadastrar'>Cadastrar</Typography>
                         
                                                                 {/* NOME */}
                         <TextField value={user.nome} onChange={(e : ChangeEvent<HTMLInputElement>) => updatedModel(e)} 
