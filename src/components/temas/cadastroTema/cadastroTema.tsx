@@ -1,12 +1,12 @@
 import React, {useState, useEffect, ChangeEvent} from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid, Box } from "@material-ui/core"
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
-
+import './cadastroTema.css';
 
 
 function CadastroTema() {
@@ -182,21 +182,45 @@ function CadastroTema() {
 
 
     return (
+      
+       
+    
         <Container maxWidth="sm" className="topo">
            
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} >
                
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de Cadastro Tema</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className="tituloFormTema">
+                   
+                    Formulário 
+                
+                </Typography>
+
                
-                <TextField value={tema.descricao} onChange ={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}  id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className= "tituloFormTema" >
+                   
+                    Cadastro de Tema
+                
+                </Typography>
+
+                <TextField value={tema.descricao} onChange ={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                  id="descricao" label="Descrição do Tema" variant="outlined" 
+                  placeholder='Digite o Tema' name="descricao" margin="normal" fullWidth />
                
-                <Button type="submit" variant="contained" color="primary">
+            <Grid container justifyContent="center">
+                
+                <Button type="submit" variant="contained" color="primary" >
+                   
                     Finalizar
+                    
                 </Button>
            
-            </form>
+           </Grid> 
+               </form>
+        
         </Container>
+      
     )
+
 }
 
 export default CadastroTema; 

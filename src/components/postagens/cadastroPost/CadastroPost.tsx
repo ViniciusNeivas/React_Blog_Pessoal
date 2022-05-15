@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Grid } from "@material-ui/core"
 import './CadastroPost.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
@@ -184,7 +184,7 @@ function CadastroPost() {
 
     return (
         
-        <Container maxWidth="sm" className="topo">
+        <Container maxWidth="sm" className="topo" >
             
             <form onSubmit={onSubmit}>
                 
@@ -208,9 +208,15 @@ function CadastroPost() {
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} 
                 id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth />
 
-                <FormControl  >
+              <Grid container justifyContent="center">
+              
+                <FormControl>
                    
-                    <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">
+                        
+                        Tema
+                        
+                    </InputLabel>
                    
                     <Select
                     
@@ -235,14 +241,15 @@ function CadastroPost() {
                     
                     </FormHelperText>
                     
-                    <Button type="submit" variant="contained" color="primary" >
+                    <Button type="submit" variant="contained" color="primary"  >
                         
                         Finalizar
                     
                     </Button>
                 
                 </FormControl>
-            
+            </Grid>                   
+
             </form>
         
         </Container>

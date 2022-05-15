@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaPostagem.css';
 
 
@@ -68,33 +68,34 @@ function ListaTema() {
 
         posts.map(post =>(
 
-
+<Grid container className="backListaPost" justifyContent="center"  >
+      
       <Box m={2} >
       
-        <Card variant="outlined">
+        <Card variant="outlined" >
       
-          <CardContent>
+          <CardContent className="backCard">
             
             
-            <Typography color="textSecondary" gutterBottom>
+            <Typography color="textSecondary" gutterBottom align="center">
               
-              Postagens
+              Postagens:
             
             </Typography>
 
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" align="center">
             
               {post.titulo}
             
             </Typography>
 
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" >
             
               {post.texto}
             
             </Typography>
 
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" align="center">
             
               {post.tema?.descricao}
             
@@ -102,7 +103,9 @@ function ListaTema() {
 
           </CardContent>
 
-          <CardActions>
+        <Grid container justifyContent="center" className="backCard" >
+          
+          <CardActions className="backCard" >
       
             <Box display="flex" justifyContent="center" mb={1.5} >
 
@@ -112,7 +115,7 @@ function ListaTema() {
                   
                   <Button variant="contained" className="marginLeft" size='small' color="primary" >
                 
-                    atualizar
+                    Atualizar
                 
                   </Button>
                 
@@ -121,7 +124,9 @@ function ListaTema() {
               </Link>
 
               <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
+            
                 <Box mx={1}>
+            
                   <Button variant="contained" size='small' color="secondary">
                     
                     deletar
@@ -136,9 +141,12 @@ function ListaTema() {
           
           </CardActions>
         
+          </Grid>
         </Card>
       
       </Box>
+
+    </Grid>
   ) )  
   }
     </>
