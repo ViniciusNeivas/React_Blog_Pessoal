@@ -69,7 +69,7 @@ function ListaTema() {
 
      <Grid container className="backListaTema" justifyContent="center">     
 
-      <Box m={6}  >
+      <Box m={8}  >
         
         <Card variant="outlined">
         
